@@ -1,0 +1,225 @@
+/* Services Page Specific Styles */
+
+/* Page Banner */
+.page-banner {
+    height: 50vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../imgs/services-banner.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin-top: 70px;
+}
+
+.banner-content h1 {
+    color: white;
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    animation: fadeInDown 1s ease;
+}
+
+.banner-content .divider {
+    background-color: var(--gold);
+    animation: fadeIn 1.5s ease;
+}
+
+/* Services Section */
+.services-section {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.section-desc {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 50px;
+}
+
+/* Services Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.service-card {
+    background-color: var(--light);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px var(--shadow);
+}
+
+.service-icon {
+    font-size: 2.5rem;
+    color: var(--green);
+    margin-bottom: 20px;
+    height: 70px;
+    width: 70px;
+    background-color: rgba(46, 93, 75, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    margin-top: 30px;
+}
+
+.service-card h3 {
+    color: var(--green);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.service-card p {
+    margin-bottom: 20px;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.service-features {
+    padding: 0 20px 30px;
+    margin-top: auto;
+}
+
+.service-features li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.service-features li i {
+    color: var(--gold);
+    margin-top: 5px;
+}
+
+/* Service Process */
+.service-process {
+    padding: 80px 0;
+    background-color: var(--light);
+}
+
+.process-steps {
+    max-width: 800px;
+    margin: 50px auto 0;
+    position: relative;
+}
+
+.process-steps::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 30px;
+    height: 100%;
+    width: 2px;
+    background-color: var(--gold);
+}
+
+.process-step {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.process-step:last-child {
+    margin-bottom: 0;
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    background-color: var(--green);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    z-index: 1;
+    box-shadow: 0 5px 15px var(--shadow);
+}
+
+.step-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px var(--shadow);
+    flex: 1;
+}
+
+.step-content h3 {
+    color: var(--green);
+    margin-bottom: 10px;
+}
+
+.step-content p {
+    margin-bottom: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .services-grid {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .banner-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .process-steps::before {
+        left: 25px;
+    }
+    
+    .step-number {
+        width: 50px;
+        height: 50px;
+        font-size: 1.3rem;
+    }
+    
+    .step-content {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .page-banner {
+        height: 40vh;
+    }
+    
+    .banner-content h1 {
+        font-size: 2rem;
+    }
+    
+    .service-card {
+        padding: 20px;
+    }
+    
+    .process-step {
+        gap: 15px;
+    }
+    
+    .step-number {
+        width: 40px;
+        height: 40px;
+        font-size: 1.1rem;
+    }
+    
+    .process-steps::before {
+        left: 20px;
+    }
+}
